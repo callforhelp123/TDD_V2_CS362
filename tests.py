@@ -15,6 +15,10 @@ class TestCheckPWD(unittest.TestCase):
         """tests if function rejects length of 21"""
         self.assertFalse(check_pwd("aaaaaaaaaaaaaaaaaaaaa"))
 
+    def test_lowercase(self):
+        """tests if function rejects a string with no lowercase letters"""
+        self.assertFalse(check_pwd("AAAAAAAA"))
+
 
 if __name__ == '__main__':
     unittest.main()

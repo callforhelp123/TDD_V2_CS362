@@ -11,6 +11,10 @@ class TestCheckPWD(unittest.TestCase):
         """tests if function rejects length of 7"""
         self.assertFalse(check_pwd("aaaaaaa"))
 
+    def test_length_of_21(self):
+        """tests if function rejects length of 21"""
+        self.assertFalse(check_pwd("aaaaaaaaaaaaaaaaaaaaa"))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,5 +9,7 @@ def check_pwd(input):
         return False
     if not any(char.islower() for char in input):
         return False
+    if not any(char.isupper() for char in input):
+        return False
 
     return True

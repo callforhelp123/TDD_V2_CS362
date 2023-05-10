@@ -27,6 +27,10 @@ class TestCheckPWD(unittest.TestCase):
         """tests if function rejects a string with no uppercase letters"""
         self.assertFalse(check_pwd("aaAAaaaaa"))
 
+    def test_no_required_symbols(self):
+        """tests if function rejects a string with no uppercase letters"""
+        self.assertFalse(check_pwd("aaAAa2aaa"))
+
 
 if __name__ == '__main__':
     unittest.main()

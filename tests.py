@@ -7,6 +7,10 @@ class TestCheckPWD(unittest.TestCase):
         """tests if function rejects empty strings"""
         self.assertFalse(check_pwd(""))
 
+    def test_length_of_7(self):
+        """tests if function rejects length of 7"""
+        self.assertFalse(check_pwd("aaaaaaa"))
+
 
 if __name__ == '__main__':
     unittest.main()
